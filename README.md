@@ -3,14 +3,14 @@
 ## Data
 The dataset is built based on [KITTI360](https://www.cvlibs.net/datasets/kitti-360/)
 
-stitch dual-fisheye into spherical image by [FFmpeg](https://ffmpeg.org/)
+Stitch dual-fisheye into spherical image by [FFmpeg](https://ffmpeg.org/)
 
 ```
 ffmpeg -y -i $file -vf v360=dfisheye:e:yaw=-90:ih_fov=187.8:iv_fov=185 -c:v libx265 -b:v 40000k -bufsize 5000k -preset ultrafast -c:a copy out.mp4
 ffmpeg -i out.mp4 -f image2 ./$(basename $file .png).png
 ```
 
-for global Lidar map making and sub-maps division, refer to [this](https://github.com/Zhaozhpe/kitti360-map-python)
+For global Lidar map making and sub-maps division, refer to [this](https://github.com/Zhaozhpe/kitti360-map-python)
 
 
 ## How to use
@@ -24,7 +24,7 @@ Specify the 3D dataset directory in `./mycode/msls.py`
 
 ```path_to_3d = ""```
 
-train
+Train the network
 
 ```python mytrain.py```
 
