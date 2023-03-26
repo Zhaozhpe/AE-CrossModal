@@ -1,4 +1,4 @@
-# basic version code for "Attention-Enhanced Cross-modal Localization Between Spherical Images and Point Clouds“
+# Basic version code for "Attention-Enhanced Cross-modal Localization Between Spherical Images and Point Clouds“
 
 1.the ML environment is based on `PyTorch`, and the `PyTorch` version is `1.7.0` in my environment.
 
