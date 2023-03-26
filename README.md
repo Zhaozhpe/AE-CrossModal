@@ -4,10 +4,10 @@
 
 + Before running `mytrain.py`, specific 2D dataset directory path in `mytrain.py` or when input the command.
 
- - `--dataset_root_dir` refers to the root directory of the 2D dataset
+  - `--dataset_root_dir` refers to the root directory of the 2D dataset
 
 + Specify the 3D dataset directory in `./mycode/msls.py`
 
- - `path_to_3d = ""`
+  - `path_to_3d = ""`
 
 + `python mytrain.py`
