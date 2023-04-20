@@ -1,17 +1,38 @@
 # Basic version code for "Attention-Enhanced Cross-modal Localization Between Spherical Images and Point Clouds“
 
 ## Data
-The dataset is built based on [KITTI360](https://www.cvlibs.net/datasets/kitti-360/)
+- The dataset is built based on [KITTI360](https://www.cvlibs.net/datasets/kitti-360/)
 
-Stitch dual-fisheye into spherical image by [FFmpeg](https://ffmpeg.org/)
+- Stitch dual-fisheye into spherical image by [FFmpeg](https://ffmpeg.org/)
 
 ```
 ffmpeg -y -i $file -vf v360=dfisheye:e:yaw=-90:ih_fov=187.8:iv_fov=185 -c:v libx265 -b:v 40000k -bufsize 5000k -preset ultrafast -c:a copy out.mp4
 ffmpeg -i out.mp4 -f image2 ./$(basename $file .png).png
 ```
 
-For global Lidar map making and sub-maps division, refer to [this](https://github.com/Zhaozhpe/kitti360-map-python)
+- For global Lidar map making and sub-maps division, refer to [this](https://github.com/Zhaozhpe/kitti360-map-python)
 
+The dataset is aranged as follows:
+```
+--2D dataset directory (e.g. kitti360)
+  --train_val
+    --s00
+      --database
+        --images
+          --1aaaaaaaaa.png
+          --11501aaaaa.png
+        --database.csv
+        --query.csv
+    --s02
+    --s10
+--3D dataset directory (e.g. kitti360_pc)
+  --s00
+    --pc
+      --0000000001.bin
+      --0000011501.bin
+  --s02
+  --s10
+```
 
 ## How to use
 the ML environment is based on `PyTorch 1.7.0`
