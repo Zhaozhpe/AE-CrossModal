@@ -16,6 +16,13 @@ For global Lidar map making and sub-maps division, refer to [this](https://githu
 ## How to use
 the ML environment is based on `PyTorch 1.7.0`
 
+conda environment
+```conda create -n pytorch python=3.9 ```
+
+clone the repository
+
+```git clone https://github.com/Zhaozhpe/AE-CrossModal.git```
+
 Before running `mytrain.py`, specific 2D dataset directory path in `mytrain.py` or when input the command.
 
 ```--dataset_root_dir refers to the root directory of the 2D dataset```
