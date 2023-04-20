@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from __future__ import print_function
 
 import argparse
@@ -29,7 +28,6 @@ from crossmodal.training_tools.tools import save_checkpoint
 from crossmodal.tools.datasets import input_transform
 from crossmodal.models.models_generic import get_backend, get_model
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 def get_learning_rate(epoch):
     learning_rate = 0.0001 * ((0.8) ** (epoch // 2))  # 0.00005
     # learning_rate = max(learning_rate, 0.00001) * 50  # CLIP THE LEARNING RATE!
