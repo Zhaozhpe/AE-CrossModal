@@ -63,8 +63,6 @@ if __name__ == "__main__":
 
     opt = parser.parse_args()
     print(opt)
-    print('os.environ[CUDA_VISIBLE_DEVICES]')
-    print(os.environ['CUDA_VISIBLE_DEVICES'])
     size = 512
     attention = False
     print('attention')
