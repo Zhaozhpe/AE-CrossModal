@@ -43,11 +43,11 @@ if __name__ == "__main__":
     parser.add_argument('--save_path', type=str, default='/data/zzp/result',
                         help='Path to save checkpoints to')
     parser.add_argument('--resume_path2d', type=str, default='',
-                        help='Full path and name (with extension) to load checkpoint from, for resuming training.') # /home/zhipengz/result2/Aug26_15-48-13_vgg_clu64_4/checkpoints/model_best.pth.tar
+                        help='Full path and name (with extension) to load checkpoint from, for resuming training.')
     parser.add_argument('--pretrained_path3d', type=str, default='',
-                        help='Full path and name (with extension) to load checkpoint from, for 3d pretrained.') # /home/zhipengz/result2/Aug26_15-48-13_vgg_clu64_4/checkpoints3d/model_best.ckpt
+                        help='Full path and name (with extension) to load checkpoint from, for 3d pretrained.')
     parser.add_argument('--cluster_path', type=str, default='',
-                        help='Full path and name (with extension) to load cluster data from, for resuming training.')# /data/zzp/cache/centroids/vgg_20m_KITTI360_64_desc_cen.hdf5
+                        help='Full path and name (with extension) to load cluster data from, for resuming training.')
     parser.add_argument('--dataset_root_dir', type=str, default='/data/kitti360',
                         help='Root directory of dataset')
     parser.add_argument('--id', type=str, default='vgg',
@@ -67,8 +67,6 @@ if __name__ == "__main__":
     print(os.environ['CUDA_VISIBLE_DEVICES'])
     size = 512
     attention = False
-    print('size')
-    print(size)
     print('attention')
     print(attention)
     print(opt.network)
